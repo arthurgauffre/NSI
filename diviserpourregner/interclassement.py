@@ -12,3 +12,10 @@ def interclassement(lst1, lst2):
     return lst_totale + lst2[i2:] + lst1[i1:]
 
 print(interclassement([2,5,7,12], [1,4,7,8,9]))
+
+def tri_fusion(lst):
+    if len(lst) <= 1:
+        return lst
+    else:
+        m = len(lst) // 2
+        return interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))

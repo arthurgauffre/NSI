@@ -4,7 +4,3 @@ def chiffre(message, masque):
         message_chiffre += chr(ord(message[k]) ^ ord(masque[k]))
     return message_chiffre
 
-
-
-
-
